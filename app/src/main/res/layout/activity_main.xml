@@ -2,6 +2,6 @@
           xmlns:tools="http://schemas.android.com/tools"
           android:id="@+id/fragment"
           android:name="fr.accman.app.view.MainActivityFragment"
-          tools:layout="@layout/fragment_main"
+          tools:layout="@layout/account_fragment"
           android:layout_width="match_parent"
           android:layout_height="match_parent"/>

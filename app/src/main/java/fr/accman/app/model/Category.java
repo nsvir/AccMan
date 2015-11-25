@@ -48,5 +48,10 @@ public class Category
 		}
 		return result;
 	}
+
+	@Override
+	public String toString() {
+		return this.getName() + ": " + getBalance();
+	}
 }
 

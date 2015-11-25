@@ -48,5 +48,9 @@ public class Account
     public List<Category> getCategories() {
         return categories;
     }
+
+    public String getName() {
+        return name;
+    }
 }
 
