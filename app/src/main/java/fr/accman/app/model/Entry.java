@@ -1,4 +1,7 @@
 package fr.accman.app.model;
+import fr.accman.app.model.utils.MyDateFormat;
+
+import java.io.Serializable;
 import java.util.*;
 
 
@@ -8,7 +11,7 @@ import java.util.*;
  * @generated
  */
 
-public class Entry
+public class Entry implements Serializable
 {
 	public long date;
 	public double value;
@@ -27,7 +30,20 @@ public class Entry
 	}
 
     public static long getNow() {
-        return GregorianCalendar.getInstance().get(Calendar.SECOND);
+        return GregorianCalendar.getInstance().getTimeInMillis();
     }
+
+	@Override
+	public String toString() {
+		return MyDateFormat.getDate(date) + ": " + value + "€";
+	}
+
+	public String getAmount() {
+		return this.value + "€";
+	}
+
+	public String getDate() {
+		return MyDateFormat.getDate(date);
+	}
 }
 

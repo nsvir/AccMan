@@ -1,6 +1,7 @@
 package fr.accman.app.model;
 import fr.accman.app.model.stream.Editor;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,10 +12,10 @@ import java.util.List;
  * @generated
  */
 
-public class Category
+public class Category implements Serializable
 {
 
-	List<Entry> entries;
+	ArrayList<Entry> entries;
 	private String name;
     private Editor editor;
 
@@ -53,5 +54,9 @@ public class Category
 	public String toString() {
 		return this.getName() + ": " + getBalance();
 	}
+
+    public ArrayList<Entry> getEntries() {
+        return entries;
+    }
 }
 

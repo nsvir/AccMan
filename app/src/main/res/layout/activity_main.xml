@@ -1,7 +1,35 @@
-<fragment xmlns:android="http://schemas.android.com/apk/res/android"
-          xmlns:tools="http://schemas.android.com/tools"
-          android:id="@+id/fragment"
-          android:name="fr.accman.app.view.MainActivityFragment"
-          tools:layout="@layout/account_fragment"
-          android:layout_width="match_parent"
-          android:layout_height="match_parent"/>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                xmlns:tools="http://schemas.android.com/tools"
+>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                  android:layout_above="@+id/button"
+                  android:orientation="horizontal"
+                  android:layout_alignParentTop="true">
+
+        <fragment
+                android:tag="AccountFragment"
+                android:name="fr.accman.app.view.AccountFragment"
+                tools:layout="@layout/account_fragment"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"/>
+
+        <FrameLayout android:layout_width="0dp" android:layout_height="match_parent"
+                     android:layout_weight="1"
+                     android:id="@+id/view_group">
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <Button
+            android:id="@+id/button"
+            android:layout_height="wrap_content" android:layout_width="match_parent"
+            android:text="@string/add_entry"
+            android:padding="20dp"
+            android:layout_alignParentBottom="true">
+    </Button>
+
+</RelativeLayout>

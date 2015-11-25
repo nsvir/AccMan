@@ -19,7 +19,7 @@ import java.util.Iterator;
  */
 public class File extends java.io.File {
 
-    private Charset charset = Charsets.UTF_8;
+    public static final Charset charset = Charsets.UTF_8;
 
     public File(java.io.File dir, String name) {
         super(dir, name);

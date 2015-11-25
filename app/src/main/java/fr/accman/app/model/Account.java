@@ -16,8 +16,8 @@ import java.util.Set;
 
 public class Account
 {
-    public Editor editor;
-	public List<Category> categories;
+    private Editor editor;
+	private List<Category> categories;
 	private String name;
 
 	public Account(User user, File name) {

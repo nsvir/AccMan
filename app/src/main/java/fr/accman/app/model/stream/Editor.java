@@ -7,6 +7,7 @@ import fr.accman.app.model.stream.file.ExternalFile;
 import fr.accman.app.model.stream.file.File;
 
 import java.io.IOException;
+import java.io.Serializable;
 import java.util.Iterator;
 import java.util.List;
 
@@ -16,7 +17,7 @@ import java.util.List;
  * @generated
  */
 
-public abstract class Editor
+public abstract class Editor implements Serializable
 {
 	protected File file;
 	protected Iterator<String> iterator;

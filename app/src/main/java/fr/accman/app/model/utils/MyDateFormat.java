@@ -18,7 +18,7 @@ public class MyDateFormat extends SimpleDateFormat {
 
     public static String getDate(long time) {
         GregorianCalendar calendar = new GregorianCalendar();
-        calendar.set(Calendar.SECOND, (int) time);
+        calendar.setTimeInMillis(time);
         return new MyDateFormat().format(calendar.getTime());
     }
 
